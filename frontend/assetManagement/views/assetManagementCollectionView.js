@@ -3,11 +3,11 @@ define(function(require){
   var _ = require('underscore');
   var Backbone = require('backbone');
   var Handlebars = require('handlebars');
-  var Origin = require('coreJS/app/origin');
-  var OriginView = require('coreJS/app/views/originView');
-  var AssetItemView = require('coreJS/assetManagement/views/assetManagementItemView');
-  var AssetModel = require('coreJS/assetManagement/models/assetModel');
-  var AssetManagementPreview = require('coreJS/assetManagement/views/assetManagementPreviewView');
+  var Origin = require('core/origin');
+  var OriginView = require('core/views/originView');
+  var AssetItemView = require('./assetManagementItemView');
+  var AssetModel = require('../models/assetModel');
+  var AssetManagementPreview = require('./assetManagementPreviewView');
 
   var AssetCollectionView = OriginView.extend({
     tagName: "div",

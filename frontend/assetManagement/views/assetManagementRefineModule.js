@@ -1,8 +1,8 @@
 // LICENCE https://github.com/adaptlearning/adapt_authoring/blob/master/LICENSE
 define(function(require) {
   var _ = require('underscore');
-  var Origin = require('coreJS/app/origin');
   var Backbone = require('backbone');
+  var Origin = require('core/origin');
 
   var AssetManagementRefineModule = Backbone.View.extend({
     tagName: 'div',

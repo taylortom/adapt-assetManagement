@@ -1,7 +1,7 @@
 // LICENCE https://github.com/adaptlearning/adapt_authoring/blob/master/LICENSE
 define(function(require) {
-  var AssetManagementRefineModule = require('coreJS/assetManagement/views/assetManagementRefineModule');
-  var Origin = require('coreJS/app/origin');
+  var Origin = require('core/origin');
+  var AssetManagementRefineModule = require('./assetManagementRefineModule');
 
   var AssetManagementWorkspaceModule = AssetManagementRefineModule.extend({
     className: 'workspace',

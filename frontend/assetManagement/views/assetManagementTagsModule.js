@@ -1,9 +1,9 @@
 // LICENCE https://github.com/adaptlearning/adapt_authoring/blob/master/LICENSE
 define(function(require) {
   var _ = require('underscore');
-  var Origin = require('coreJS/app/origin');
-  var AssetManagementRefineModule = require('coreJS/assetManagement/views/assetManagementRefineModule');
-  var TagsCollection = require('coreJS/tags/collections/tagsCollection');
+  var Origin = require('core/origin');
+  var AssetManagementRefineModule = require('./assetManagementRefineModule');
+  var TagsCollection = require('core/collections/tagsCollection');
 
   var AssetManagementTagsModule = AssetManagementRefineModule.extend({
     className: 'tags',

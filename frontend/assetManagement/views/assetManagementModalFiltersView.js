@@ -1,12 +1,12 @@
 // LICENCE https://github.com/adaptlearning/adapt_authoring/blob/master/LICENSE
 define(function(require) {
 
-    var Origin = require('coreJS/app/origin');
+    var Origin = require('core/origin');
     var Backbone = require('backbone');
-    var AssetManagementModalTagsView = require('coreJS/assetManagement/views/assetManagementModalTagsView');
-    var AssetManagementModalNewAssetView = require('coreJS/assetManagement/views/assetManagementModalNewAssetView');
-    var AssetModel = require('coreJS/assetManagement/models/assetModel');
-    var TagsCollection = require('coreJS/tags/collections/tagsCollection');
+    var AssetManagementModalTagsView = require('./assetManagementModalTagsView');
+    var AssetManagementModalNewAssetView = require('./assetManagementModalNewAssetView');
+    var AssetModel = require('../models/assetModel');
+    var TagsCollection = require('core/collections/tagsCollection');
 
     var AssetManagementModalFiltersView = Backbone.View.extend({
 

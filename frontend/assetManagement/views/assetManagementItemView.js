@@ -2,8 +2,8 @@
 define(function(require){
   var Backbone = require('backbone');
   var Handlebars = require('handlebars');
-  var OriginView = require('coreJS/app/views/originView');
-  var Origin = require('coreJS/app/origin');
+  var OriginView = require('core/views/originView');
+  var Origin = require('core/origin');
 
   var AssetItemView = OriginView.extend({
     tagName: 'div',

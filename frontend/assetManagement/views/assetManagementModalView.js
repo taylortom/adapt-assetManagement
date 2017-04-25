@@ -1,12 +1,12 @@
 // LICENCE https://github.com/adaptlearning/adapt_authoring/blob/master/LICENSE
 define(function(require) {
   var _ = require('underscore');
-  var Origin = require('coreJS/app/origin');
-  var AssetModel = require('coreJS/assetManagement/models/assetModel');
-  var AssetManagementCollectionView = require('coreJS/assetManagement/views/assetManagementCollectionView');
-  var AssetManagementRefineView = require('coreJS/assetManagement/views/assetManagementRefineView');
-  var AssetManagementView = require('coreJS/assetManagement/views/assetManagementView');
-  var AssetManagementModalNewAssetView = require('coreJS/assetManagement/views/assetManagementModalNewAssetView');
+  var Origin = require('core/origin');
+  var AssetModel = require('../models/assetModel');
+  var AssetManagementCollectionView = require('./assetManagementCollectionView');
+  var AssetManagementRefineView = require('./assetManagementRefineView');
+  var AssetManagementView = require('./assetManagementView');
+  var AssetManagementModalNewAssetView = require('./assetManagementModalNewAssetView');
 
   var AssetManagementModalView = AssetManagementView.extend({
     preRender: function(options) {

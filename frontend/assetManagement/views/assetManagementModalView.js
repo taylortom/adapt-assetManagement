@@ -14,9 +14,11 @@ define(function(require) {
   	  this.options = options;
   	  AssetManagementView.prototype.preRender.apply(this, arguments);
 
-      this.listenTo(Origin, 'assetManagement:assetItemView:preview', this.onPreview);
-      this.listenTo(Origin, 'assetManagement:modal:update', this.onAssetUpdate);
-      this.listenTo(Origin, 'assetManagement:refine:show', this.onRefineShow);
+      this.listenTo(Origin, {
+        'assetManagement:assetItemView:preview': this.onPreview,
+        'assetManagement:modal:update': this.onAssetUpdate,
+        'assetManagement:refine:show': this.onRefineShow
+      });
     },
 
     setupSubViews: function() {
@@ -89,7 +91,7 @@ define(function(require) {
         Origin.trigger('assetManagement:refine:hide');
         Origin.trigger('assetManagement:assetPreviewView:delete');
         Origin.trigger('assetManagement:refine:hide');
-        var newAssetView = new AssetManagementModalNewAssetView({model: new AssetModel()});
+        var newAssetView = new AssetManagementModalNewAssetView({ model: new AssetModel() });
         $('.asset-management-inner').append(newAssetView.$el);
       }
     },

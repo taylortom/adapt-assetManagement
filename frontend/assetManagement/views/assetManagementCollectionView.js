@@ -54,9 +54,9 @@ define(function(require){
       var $el = this.$('.asset-management-list-item').first();
       var $container = $('.asset-management');
       // always round down, as tiles will be pushed to next row
-      var horizontalItems = Math.floor($container.width()/$el.outerWidth(true));
+      var horizontalItems = Math.floor($container.width() / $el.outerWidth(true));
       // always round up, as rows could be half onscreen
-      var verticalItems = Math.ceil($container.height()/$el.outerHeight(true));
+      var verticalItems = Math.ceil($container.height() / $el.outerHeight(true));
       this.assetPageSize = horizontalItems*verticalItems;
       // Set to minus so we can have more DRY code
       this.assetLimit = this.assetPageSize*-1;
@@ -188,11 +188,7 @@ define(function(require){
     },
 
     onCollectionSynced: function() {
-      if (this.collection.length === 0) {
-        $('.asset-management-no-assets').removeClass('display-none');
-      } else {
-        $('.asset-management-no-assets').addClass('display-none');
-      }
+      $('.asset-management-no-assets').toggleClass('display-none', this.collection.length > 0);
       // HACK for chrome: makes sure the view is scrollable
       if (this.assetLimit < this.assetDenominator) {
         $('.asset-management-assets-container').hide();

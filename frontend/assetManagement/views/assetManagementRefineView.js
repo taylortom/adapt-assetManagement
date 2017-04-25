@@ -11,13 +11,13 @@ define(function(require) {
     ? license
     */
     modules: {
-      assetManagementSummaryModule: require('coreJS/assetManagement/views/assetManagementSummaryModule'),
-      assetManagementSearchModule: require('coreJS/assetManagement/views/assetManagementSearchModule'),
-      assetManagementSortModule: require('coreJS/assetManagement/views/assetManagementSortModule'),
-      assetManagementCourseModule: require('coreJS/assetManagement/views/assetManagementCourseModule'),
-      assetManagementWorkspaceModule: require('coreJS/assetManagement/views/assetManagementWorkspaceModule'),
-      assetManagementMineModule: require('coreJS/assetManagement/views/assetManagementMineModule'),
-      assetManagementTagsModule: require('coreJS/assetManagement/views/assetManagementTagsModule')
+      assetManagementSummaryModule: require('./assetManagementSummaryModule'),
+      assetManagementSearchModule: require('./assetManagementSearchModule'),
+      assetManagementSortModule: require('./assetManagementSortModule'),
+      assetManagementCourseModule: require('./assetManagementCourseModule'),
+      assetManagementWorkspaceModule: require('./assetManagementWorkspaceModule'),
+      assetManagementMineModule: require('./assetManagementMineModule'),
+      assetManagementTagsModule: require('./assetManagementTagsModule')
     },
     modulesLoaded: {},
 

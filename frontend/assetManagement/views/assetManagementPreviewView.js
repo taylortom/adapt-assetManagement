@@ -28,8 +28,11 @@ define(function(require){
       var courseNames = [];
       // look up course models and store titles
       for(var i = 0, count = uses.length; i < count; i++) {
-        var title = Origin.editor.data.courses.findWhere({_id:uses[i]}).get('title');
-        if(_.indexOf(courseNames, title) == -1) courseNames.push(title);
+        var course = Origin.editor.data.courses.findWhere({_id:uses[i]});
+        var title = course && course.get('title');
+        if(title && _.indexOf(courseNames, title) == -1) {
+          courseNames.push(title);
+        }
       }
       // set on model
       this.model.set('courses', courseNames);

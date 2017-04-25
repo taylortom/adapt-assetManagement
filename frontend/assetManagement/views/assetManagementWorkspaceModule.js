@@ -5,7 +5,7 @@ define(function(require) {
 
   var AssetManagementWorkspaceModule = AssetManagementRefineModule.extend({
     className: 'workspace',
-    title: 'Filter by location',
+    title: Origin.l10n.t('app.refineworkspacetitle'),
     filterType: 'search',
 
     events: {

@@ -7,7 +7,7 @@ define(function(require) {
 
   var AssetManagementTagsModule = AssetManagementRefineModule.extend({
     className: 'tags',
-    title: 'Filter by tags',
+    title: Origin.l10n.t('app.refinetagstitle'),
     filterType: 'tags',
     autoRender: false,
 

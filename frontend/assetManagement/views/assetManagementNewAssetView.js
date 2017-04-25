@@ -51,7 +51,7 @@ define(function(require){
         if (!$.trim($(el).val())) {
           validated = false;
           $(el).addClass('input-error');
-          $(errormsg).text(window.polyglot.t('app.pleaseentervalue'));
+          $(errormsg).text(Origin.l10n.t('app.pleaseentervalue'));
         } else {
           $(el).removeClass('input-error');
           $(errormsg).text('');
@@ -158,7 +158,7 @@ define(function(require){
     onUploadSaveError: function() {
       Origin.Notify.alert({
         type: 'error',
-        text: window.polyglot.t('app.errorassetupdate')
+        text: Origin.l10n.t('app.errorassetupdate')
       });
     },
 

@@ -66,7 +66,7 @@ define(function(require){
 
       Origin.Notify.confirm({
         type: 'warning',
-        text: window.polyglot.t('app.assetconfirmdelete'),
+        text: Origin.l10n.t('app.assetconfirmdelete'),
         callback: _.bind(this.onDeleteConfirmed, this)
       });
     },
@@ -82,7 +82,7 @@ define(function(require){
     onRestoreButtonClicked: function(e) {
       e && e.preventDefault();
       Origin.Notify.confirm({
-        text: window.polyglot.t('app.assetconfirmrestore'),
+        text: Origin.l10n.t('app.assetconfirmrestore'),
         callback: _.bind(this.onRestoreConfirmed, this)
       });
     },
@@ -101,7 +101,7 @@ define(function(require){
           error: function(data) {
             Origin.Notify.alert({
               type: 'error',
-              text: window.polyglot.t('app.errorrestoreasset', { message: data.message })
+              text: Origin.l10n.t('app.errorrestoreasset', { message: data.message })
             });
           }
         });

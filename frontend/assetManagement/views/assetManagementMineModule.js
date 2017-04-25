@@ -5,7 +5,7 @@ define(function(require) {
 
   var AssetManagementMineModule = AssetManagementRefineModule.extend({
     className: 'mine',
-    title: 'Filter by owner',
+    title: Origin.l10n.t('app.refineminetitle'),
     filterType: 'search',
 
     events: {

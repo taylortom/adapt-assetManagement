@@ -5,7 +5,7 @@ define(function(require) {
 
   var AssetManagementSortModule = AssetManagementRefineModule.extend({
     className: 'sort',
-    title: 'Sort by',
+    title: Origin.l10n.t('app.refinesorttitle'),
     filterType: 'sort',
 
     events: {

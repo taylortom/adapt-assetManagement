@@ -6,7 +6,7 @@ define(function(require) {
 
   var AssetManagementCourseModule = AssetManagementRefineModule.extend({
     className: 'course',
-    title: 'Filter by course',
+    title: Origin.l10n.t('app.refinecoursetitle'),
     filterType: 'search',
 
     events: {

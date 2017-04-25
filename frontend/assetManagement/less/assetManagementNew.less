@@ -30,6 +30,8 @@
     padding: 20px;
     form {
       label[for=file] {
+        display: inline-block;
+        vertical-align: top;
         padding: 5px;
         .inner {
           padding: 15px;
@@ -62,6 +64,13 @@
   overflow-y: scroll;
   .asset-management-new-asset-inner {
     .form-container-style;
+    max-width: 600px;
+    .preview {
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      display: inline-block;
+    }
     .courses {
       display: none;
       &.show {

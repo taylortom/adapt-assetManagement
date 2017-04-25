@@ -31,50 +31,6 @@
     visibility: hidden;
   }
 
-  @input-text-padding: 10px;
-  @input-text-height: 25px;
-  @input-text-actual-height: @input-text-padding + @input-text-height + @input-text-padding;
-
-  &.text input {
-    height: 25px;
-    padding: @input-text-padding;
-    background-color: darken(@background-color, 3%);
-    border-color: @control-border-color;
-    border-radius: @button-radius;
-    color: @font-color;
-
-    @placeholder-color: lighten(@control-border-color, 25%);
-    &::-webkit-input-placeholder {
-      color: @placeholder-color;
-    }
-    &:-moz-placeholder {
-      color: @placeholder-color;
-    }
-    &::-moz-placeholder {
-      color: @placeholder-color;
-    }
-    &:-ms-input-placeholder {
-      color: @placeholder-color;
-    }
-
-    ~ button.clear {
-      position: absolute;
-      top: 0;
-      left: 200px;
-      height: @input-text-actual-height;
-      padding: 10px;
-      width: auto;
-      i {
-        color: @placeholder-color;
-      }
-      &:hover {
-        i {
-          color: lighten(@control-border-color, 15%);
-        }
-      }
-    }
-  }
-
   label {
     display: inline-block !important;
     position: relative;
@@ -220,7 +176,7 @@
       .inner {
         display: block;
         // done to avoid odd spacing when hidden
-        margin: 20px 0;
+        margin-top: 20px;
         padding-left: 10px;
         font-size: @font-size;
 
@@ -289,14 +245,8 @@
         }
       }
 
-      &.search {
-        padding: 0 12px 15px 20px;
-        .input {
-          margin-bottom: 0;
-          button {
-            right: 10px;
-          }
-        }
+      &.search .input {
+        margin-bottom: 0;
       }
 
       &.tags {
@@ -327,29 +277,6 @@
   }
 }
 
-.sidebar .assetManagement-refine {
-  margin-left: 0;
-  background-color: transparent;
-  border: none;
-  .module {
-    &.summary {
-      padding-top: 0;
-    }
-    &.search {
-      .input {
-        input {
-          // TODO do something dynamic...
-          width: 210px;
-        }
-      }
-    }
-    &.workspace {
-      // TODO stop this rendering at all
-      display: none;
-    }
-    &.tags {
-      border: none;
-      padding-bottom: 5px;
-    }
-  }
+.assetManagement-refine.sidebar {
+  position: relative;
 }

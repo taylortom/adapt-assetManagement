@@ -7,16 +7,6 @@
   visibility:hidden !important;
 }
 
-.unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
-}
-
 .no-scroll {
   overflow:hidden;
 }
@@ -57,6 +47,14 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 90%;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
 }
 
 // hides sidebars, nav bars etc, and displays blue bg

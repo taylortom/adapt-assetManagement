@@ -20,16 +20,19 @@ define(function(require){
     },
 
     addListeners: function() {
-      this.listenTo(Origin, 'assetManagement:sidebarFilter:add', this.addFilter);
-      this.listenTo(Origin, 'assetManagement:sidebarFilter:remove', this.removeFilter);
-      this.listenTo(Origin, 'assetManagement:sidebarView:filter', this.filterBySearchInput);
-      this.listenTo(Origin, 'assetManagement:assetManagementSidebarView:filterByTags', this.filterByTags);
-      this.listenTo(Origin, 'assetManagement:collection:refresh', this.updateCollection);
+      this.listenTo(Origin, {
+        'assetManagement:sidebarFilter:add': this.addFilter,
+        'assetManagement:sidebarFilter:remove': this.removeFilter,
+        'assetManagement:sidebarView:filter': this.filterBySearchInput,
+        'assetManagement:assetManagementSidebarView:filterByTags': this.filterByTags,
+        'assetManagement:collection:refresh': this.updateCollection,
+        'assets:update': this.onAssetUpdated
+      });
 
-      this.listenTo(Origin, 'assets:update', this.onAssetUpdated);
-
-      this.listenTo(this.collection, 'add', this.appendAssetItem);
-      this.listenTo(this.collection, 'sync', this.onCollectionSynced);
+      this.listenTo(this.collection, {
+        add: this.appendAssetItem,
+        sync: this.onCollectionSynced
+      });
 
       $('.asset-management-message').click(_.bind(this.clickMessage, this));
     },

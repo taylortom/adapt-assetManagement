@@ -24,11 +24,11 @@ define(function(require) {
     initialize: function(options) {
       this.options = options;
 
-      this.listenTo(Origin, 'remove:views', this.remove);
-      this.listenTo(Origin, 'modal:closed', this.remove);
-
-      this.listenTo(Origin, 'modal:resize', this.onModalResize);
-      this.listenTo(Origin, 'assetManagement:refine:hide', this.hide);
+      this.listenTo(Origin, {
+        'remove:views modal:closed': this.remove,
+        'modal:resize': this.onModalResize,
+        'assetManagement:refine:hide': this.hide,
+      });
 
       this.render();
     },

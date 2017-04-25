@@ -14,12 +14,9 @@ define(function(require) {
     initialize: function() {
       AssetManagementRefineModule.prototype.initialize.apply(this, arguments);
 
-      this.listenTo(Origin, 'assetManagement:assetManagementCollection:fetched', this.update);
-
-      // when ready, listen for filters
-      this.listenTo(Origin, 'assetManagement:refine:ready', function() {
-        this.hideResetButton();
-        this.listenTo(Origin, 'assetManagement:refine:apply', this.showResetButton);
+      this.listenTo(Origin, {
+        'assetManagement:assetManagementCollection:fetched': this.update,
+        'assetManagement:refine:ready': this.onRefineReady
       });
     },
 
@@ -39,6 +36,11 @@ define(function(require) {
 
     hideResetButton: function() {
       this.$('a.reset').addClass('hide');
+    },
+
+    onRefineReady: function() {
+      this.hideResetButton();
+      this.listenTo(Origin, 'assetManagement:refine:apply', this.showResetButton);
     },
 
     onResetClicked: function(e) {

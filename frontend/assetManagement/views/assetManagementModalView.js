@@ -40,7 +40,9 @@ define(function(require) {
     setUpRefineView: function() {
       this.$('.asset-management-assets-container-inner').hide();
       // add sidebar class to pull in styling
-      this.$('.asset-management-inner').prepend(new AssetManagementRefineView().$el.addClass('sidebar'));
+      var $el = new AssetManagementRefineView().$el;
+      $el.removeClass('show').addClass('sidebar');
+      this.$('.asset-management-inner').prepend($el);
     },
 
     setUpNewAssetButton: function() {

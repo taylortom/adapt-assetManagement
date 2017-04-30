@@ -28,7 +28,6 @@ define(function(require) {
     Origin.assetManagement = {
       filterData: {}
     };
-
     if(!location) {
       loadCollectionView();
     }
